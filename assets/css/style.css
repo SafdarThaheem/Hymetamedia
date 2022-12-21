@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.logoVaymerMedia{
+    max-width: 179px;
+}
+
+.navbar{
+    background-color: rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* hamburger menu icon */
+
+#hamburger-menu{
+    height: 35px;
+    width: 35px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.ham-bar{
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform .6s, opacity .8s, top .6s;
+}
+.ham-bar:hover{
+   background-color: white; 
+}
+
+.bar-top{
+    top: 25%;
+    background-color: whitesmoke;
+}
+
+.bar-bottom{
+    top: 75%;
+    background-color: whitesmoke;
+}
+
+#hamburger-menu.active .bar-top{
+    transform: translate(-50%, -50%) rotate(-315deg);
+    top: 50%;
+}
+
+#hamburger-menu.active .bar-mid{
+    opacity: 0;
+}
+
+#hamburger-menu.active .bar-bottom{
+    transform: translate(-50%, -50%) rotate(-225deg);
+    top: 50%;
+}
+
+/* off Screen */
+.off-screen{
+    position: fixed;
+    bottom: -100%;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    z-index: 99;
+    background-color: #22b4abdb;
+    transition: bottom .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.off-screen.active{
+    bottom: 0;
+}
+
+.menu{
+    list-style: none;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.menu .menu-item a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: -1px;
+    font-size: 50px;  
+}
+
+.bottom{
+    display: flex;
+    margin-top: auto;
+}
+
+.bottom-icon{
+    display: flex;
+    padding-left: 650px;
+}
+
+.bottom-text .a-tag{
+    color: white;
+    text-decoration: none;
+}
+
+.bottom-icon .a-tag{
+    margin-left: 20px;
+    color: white;
+}
+
+@media screen and (max-width: 999px) {
+
+    .logoVaymerMedia{
+        max-width: 150px;
+    }
+
+    .bottom{
+        flex-direction: column-reverse;
+    }
+    
+    .bottom-icon{
+        padding-left: 0px;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+}
+
