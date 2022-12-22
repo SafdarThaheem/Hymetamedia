@@ -1,32 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@800&display=swap');
-*{
+
+:root {
+    --web-font: 'Work Sans', sans-serif;
+    --text-primary-color: white;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-
-.logoVaymerMedia{
+.company-logo {
     max-width: 179px;
 }
 
-.navbar{
+.navbar {
     background-color: rgba(0, 0, 0, 0.1);
     position: relative;
 }
 
 /* hamburger menu icon */
-
-#hamburger-menu{
+#hamburger-menu {
     height: 35px;
     width: 35px;
     position: relative;
     cursor: pointer;
-
 }
 
-.ham-bar{
+.ham-bar {
     width: 100%;
     height: 4px;
     background-color: white;
@@ -37,43 +39,44 @@
     transform: translate(-50%, -50%);
     transition: transform .6s, opacity .8s, top .6s;
 }
-.ham-bar:hover{
+
+.ham-bar:hover {
    background-color: white; 
 }
 
-.bar-top{
+.bar-top {
     top: 25%;
     background-color: whitesmoke;
 }
 
-.bar-bottom{
+.bar-bottom {
     top: 75%;
     background-color: whitesmoke;
 }
 
-#hamburger-menu.active .bar-top{
+#hamburger-menu.active .bar-top {
     transform: translate(-50%, -50%) rotate(-315deg);
     top: 50%;
 }
 
-#hamburger-menu.active .bar-mid{
+#hamburger-menu.active .bar-mid {
     opacity: 0;
 }
 
-#hamburger-menu.active .bar-bottom{
+#hamburger-menu.active .bar-bottom {
     transform: translate(-50%, -50%) rotate(-225deg);
     top: 50%;
 }
 
 /* off Screen */
-.off-screen{
+.off-screen {
     position: fixed;
     bottom: -100%;
     height: 100%;
     width: 100%;
     left: 0px;
     z-index: 99;
-    background-color: #22b4abdb;
+    background-color: #22b4ab;
     transition: bottom .3s;
     display: flex;
     justify-content: center;
@@ -81,55 +84,54 @@
     flex-direction: column;
 }
 
-.off-screen.active{
+.off-screen.active {
     bottom: 0;
 }
 
-.menu{
+.menu {
     list-style: none;
     text-align: center;
     margin-top: 150px;
 }
 
-.menu .menu-item a{
+.menu .menu-item a {
     text-decoration: none;
-    color: white;
-    font-family: 'Work Sans', sans-serif;
+    color: var(--text-primary-color);
+    font-family: var(--web-font);
     letter-spacing: -1px;
     font-size: 50px;  
 }
 
-.bottom{
+.bottom {
     display: flex;
     margin-top: auto;
 }
 
-.bottom-icon{
+.bottom-icon {
     display: flex;
     padding-left: 650px;
 }
 
-.bottom-text .a-tag{
-    color: white;
+.bottom-text .a-tag {
+    color: var(--text-primary-color);
     text-decoration: none;
 }
 
-.bottom-icon .a-tag{
+.bottom-icon .a-tag {
     margin-left: 20px;
-    color: white;
+    color: var(--text-primary-color);
 }
 
 @media screen and (max-width: 999px) {
-
-    .logoVaymerMedia{
+    .company-logo {
         max-width: 150px;
     }
 
-    .bottom{
+    .bottom {
         flex-direction: column-reverse;
     }
-    
-    .bottom-icon{
+
+    .bottom-icon {
         padding-left: 0px;
         margin-bottom: 20px;
         justify-content: center;
