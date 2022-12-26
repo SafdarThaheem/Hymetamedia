@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 :root {
+    --web-background: black;
     --off-screen-background-color: #22b4ab;
     --web-font: 'Work Sans', sans-serif;
+    --permanent-marker-font: 'Permanent Marker', cursive;
     --text-primary-color: white;
 }
 
@@ -90,7 +92,7 @@
 }
 
 .menu {
-    list-style: none;
+    list-style-type: none;
     text-align: center;
     margin-top: 150px;
 }
@@ -121,6 +123,84 @@
 .bottom-icon .a-tag {
     margin-left: 20px;
     color: var(--text-primary-color);
+}
+
+/* banner Style */
+.banner {
+    background-color: var(--web-background);
+    height: 100vh;
+}
+
+.banner-image {
+    background-image: url('../img/vaynerbreakthrough2022.jpeg');
+    height: 100vh;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.adweekImg {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    max-width: 250px;
+    max-height: 100px;
+}
+
+.agency-text mark {
+    /* background-color: var(--off-screen-background-color) !important; */
+    background-image: linear-gradient(to right,#27ccc0 0,#27ccc0 100%);
+    color: var(--text-primary-color);
+    font-family: var(--web-font);
+    font-size: x-large;
+    letter-spacing: 1px;
+    padding: 0;
+}
+
+.story-text {
+    font-family: var(--permanent-marker-font);
+    color: var(--text-primary-color);
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.auther-text {
+    color: var(--text-primary-color);
+    font-size: 20px;
+    margin-left: 8rem;
+    margin-top: 0px;
+}
+
+.about-text {
+    color: var(--text-primary-color);
+    font-family: var(--web-font);
+    letter-spacing: 1px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.read-btn {
+    text-decoration: none;
+    color: var(--off-screen-background-color);
+    text-transform: uppercase;
+    font-size: small;
+    padding: 8px 25px 8px 35px;
+    font-weight: bold;
+    border: 2px solid var(--off-screen-background-color);
+    transition: all ease .5s;
+}
+.read-btn i {
+    visibility: hidden;
+}
+
+.read-btn:hover {
+    color: var(--text-primary-color);
+    background-color: var(--off-screen-background-color);
+}
+
+.read-btn:hover i {
+    visibility: visible;
+    margin-left: 10px;
 }
 
 @media screen and (max-width: 999px) {
