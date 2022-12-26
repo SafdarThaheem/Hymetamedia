@@ -138,7 +138,7 @@
     background-repeat: no-repeat;
 }
 
-.adweekImg {
+.ad-week-img {
     margin-top: 25px;
     margin-bottom: 20px;
     max-width: 250px;
@@ -153,9 +153,11 @@
     font-size: x-large;
     letter-spacing: 1px;
     padding: 0;
+    text-transform: uppercase;
 }
 
 .story-text {
+    text-transform: uppercase;
     font-family: var(--permanent-marker-font);
     color: var(--text-primary-color);
     font-size: 25px;
@@ -172,6 +174,7 @@
 }
 
 .about-text {
+    text-transform: uppercase;
     color: var(--text-primary-color);
     font-family: var(--web-font);
     letter-spacing: 1px;
