@@ -21,7 +21,7 @@
 
 .navbar {
     background-color: rgba(0, 0, 0, 0.1);
-    position: absolute;
+    position: fixed;
 }
 
 /* hamburger menu icon */
@@ -194,8 +194,32 @@
     border: 2px solid var(--off-screen-background-color);
     transition: all ease .5s;
 }
+
+.read-btn2{
+    margin-top: 10px;
+    max-width:  45%;
+    text-decoration: none;
+    color: var(--text-primary-color);
+    text-transform: uppercase;
+    font-size: small;
+    padding: 9px 25px 9px 35px;
+    font-weight: bold;
+    border: 1.5px solid white;
+    transition: all ease .5s;
+}
+
+.read-btn2 i {
+    visibility: hidden;
+}
+
 .read-btn i {
     visibility: hidden;
+}
+
+.read-btn2:hover {
+    color: var(--text-primary-color);
+    background-color: var(--off-screen-background-color);
+    border-color: var(--off-screen-background-color);
 }
 
 .read-btn:hover {
@@ -203,12 +227,56 @@
     background-color: var(--off-screen-background-color);
 }
 
+.read-btn2:hover i {
+    visibility: visible;
+    margin-left: 10px;
+}
+
 .read-btn:hover i {
     visibility: visible;
     margin-left: 10px;
 }
 
-@media screen and (max-width: 768px) {
+/* excerpt-section css */
+.excerpt-section{
+    background-color: var(--web-background);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-side-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 50px;
+}
+
+.right-side-text span{
+    color: transparent;
+    -webkit-text-stroke:.5px white;
+}
+
+.right-side-text h5{
+    margin: 20px 0;
+    text-transform: uppercase;
+    color: white;
+    font-family: var(--web-font);
+    letter-spacing: 1px;
+}
+
+.tiktok-text{
+    font-family: var(--web-font);
+    color: white;
+}
+
+.adage-img-col img{
+    max-height: 60vh;
+}
+
+@media screen and (max-width: 1200px) {
     .company-logo {
         max-width: 150px;
     }
@@ -221,6 +289,22 @@
         padding-left: 0px;
         margin-bottom: 20px;
         justify-content: center;
+    }
+
+    .read-btn2{
+        width: auto;
+        padding: 10px 10px;
+    }
+
+    .right-side-text{
+        margin-top: 10px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .adage-img-col img{
+        margin-top: 0;
+        width: 100%;
     }
 }
 
