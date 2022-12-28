@@ -9,6 +9,11 @@
     --web-font: 'Work Sans', sans-serif;
     --permanent-marker-font: 'Permanent Marker', cursive;
     --text-primary-color: white;
+    --nav-toggle-illuminnated: #444444;
+}
+
+html, body {
+    overflow-x: hidden;
 }
 
 * {
@@ -24,6 +29,18 @@
 .navbar {
     background-color: rgba(0, 0, 0, 0.1);
     position: fixed;
+    height: 130px;
+    transition: height cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
+}
+
+.navbar.illuminated-nav {
+    background-color: white;
+    height: 80px;
+}
+
+.navbar.illuminated-nav .ham-bar {
+    background-color: var(--nav-toggle-illuminnated);
+    opacity: 0.5;
 }
 
 /* hamburger menu icon */
@@ -135,17 +152,24 @@
     position: relative;
 }
 
-.banner-image {
-    background-image: url('../img/vaynerbreakthrough2022.jpeg');
+.banner-img img {
     height: 100vh;
-    background-position: right;
-    background-repeat: no-repeat;
+}
+
+.banner-content {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    position: relative;
+    min-width: 450px;
+    margin-top: 100px;
 }
 
 .ad-week-img {
     margin-top: 25px;
     margin-bottom: 20px;
-    max-width: 250px;
+    max-width: 310px;
     max-height: 100px;
 }
 
@@ -173,7 +197,7 @@
 .auther-text {
     color: var(--text-primary-color);
     font-size: 20px;
-    margin-left: 8rem;
+    text-align: right;
     margin-top: 0px;
 }
 
@@ -274,7 +298,7 @@
 .excerpt-section {
     background-color: var(--web-background);
     width: 100%;
-    min-height: 600px;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -305,8 +329,8 @@
     color: white;
 }
 
-.adage-img-col img {
-    max-width: 670px;
+.adage-img-col {
+    width: 150%;
 }
 
 .adage-img-col a {
@@ -316,6 +340,7 @@
     letter-spacing: 2px;
     text-align: center;
     text-decoration: none;
+    font-size: 13px;
 }
 
 .adage-img-col h6 {
@@ -337,11 +362,12 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
+    min-height: 430px;
 }
 
 .inner-built-different h2 {
     font-family: var(--web-font);
-    font-size: 40px;
+    font-size: 54px;
     z-index: 1;
 }
 
@@ -353,7 +379,23 @@
     z-index: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
+    .adage-img-col {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .banner-content {
+        min-width: auto;
+        margin-top: 30px;
+    }
+
+    .banner-img {
+        display: none;
+    }
+    
     .company-logo {
         max-width: 150px;
     }
@@ -383,9 +425,6 @@
         text-align: center;
     }
 
-    .adage-img-col img {
-        margin-top: 0;
-        width: 100%;
-    }
 }
+
 
