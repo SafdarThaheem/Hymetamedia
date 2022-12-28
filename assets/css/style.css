@@ -4,6 +4,8 @@
 :root {
     --web-background: black;
     --off-screen-background-color: #22b4ab;
+    --button-text-color:rgb(39, 204, 192);
+    --button-border-color: rgba(39, 204, 192, 0.75);
     --web-font: 'Work Sans', sans-serif;
     --permanent-marker-font: 'Permanent Marker', cursive;
     --text-primary-color: white;
@@ -21,7 +23,7 @@
 
 .navbar {
     background-color: rgba(0, 0, 0, 0.1);
-    position: absolute;
+    position: fixed;
 }
 
 /* hamburger menu icon */
@@ -186,26 +188,169 @@
 
 .read-btn {
     text-decoration: none;
-    color: var(--off-screen-background-color);
+    color: var(--button-text-color);
     text-transform: uppercase;
     font-size: small;
-    padding: 8px 25px 8px 35px;
+    max-width: 221px;
+    height: 42px;
     font-weight: bold;
-    border: 2px solid var(--off-screen-background-color);
+    border: 2px solid var(--button-border-color);
+    letter-spacing: 1px;
     transition: all ease .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.read-btn span {
+    left: 0;
+    transform: translateX(0);
+    transition: opacity .45s cubic-bezier(.25,1,.33,1),transform .45s cubic-bezier(.25,1,.33,1);
+    position: relative;
+}
+
 .read-btn i {
-    visibility: hidden;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    opacity: 0;
 }
 
 .read-btn:hover {
     color: var(--text-primary-color);
     background-color: var(--off-screen-background-color);
+    opacity: 1!important;
 }
 
 .read-btn:hover i {
+    opacity: 1!important;
+}
+
+.read-btn:hover span {
+    transform: translateX(-8px);
+}
+
+.read-btn-2 {
+    text-decoration: none;
+    color: var(--text-primary-color);
+    text-transform: uppercase;
+    font-size: small;
+    max-width: 221px;
+    height: 42px;
+    font-weight: bold;
+    border: 2px solid var(--text-primary-color);
+    letter-spacing: 1px;
+    transition: all ease .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.read-btn-2 span {
+    left: 0;
+    transform: translateX(0);
+    transition: opacity .45s cubic-bezier(.25,1,.33,1),transform .45s cubic-bezier(.25,1,.33,1);
+    position: relative;
+}
+
+.read-btn-2 i {
+    visibility: hidden;
+}
+
+.read-btn-2:hover {
+    color: var(--text-primary-color);
+    background-color: var(--off-screen-background-color);
+    border-color: var(--off-screen-background-color);
+}
+
+.read-btn-2:hover i {
     visibility: visible;
-    margin-left: 10px;
+}
+
+.read-btn-2:hover span {
+    transform: translateX(-8px);
+}
+
+/* excerpt-section css */
+.excerpt-section {
+    background-color: var(--web-background);
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-side-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 50px;
+}
+
+.right-side-text h3 span {
+    color: transparent;
+    -webkit-text-stroke:.5px white;
+}
+
+.right-side-text h5 {
+    margin: 20px 0;
+    text-transform: uppercase;
+    color: white;
+    font-family: var(--web-font);
+    letter-spacing: 1px;
+}
+
+.tiktok-text {
+    font-family: var(--web-font);
+    color: white;
+}
+
+.adage-img-col img {
+    max-width: 670px;
+}
+
+.adage-img-col a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.adage-img-col h6 {
+    margin-top: -50px;
+    text-align: center;
+}
+
+.built-different {
+    width: 100%;
+    height: 400px;
+    background-color: white;
+    display: flex;
+    
+}
+
+.inner-built-different {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.inner-built-different h2 {
+    font-family: var(--web-font);
+    font-size: 40px;
+    z-index: 1;
+}
+
+.underline-text {
+    background-color: var(--off-screen-background-color);
+    width: 41%;
+    height: 10px;
+    margin-top: -20px;
+    z-index: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -221,6 +366,26 @@
         padding-left: 0px;
         margin-bottom: 20px;
         justify-content: center;
+    }
+
+    .excerpt-section {
+        height: auto;
+    }
+
+    .read-btn-2 {
+        max-width: 100%;
+        padding: 10px 10px;
+    }
+
+    .right-side-text {
+        margin-top: 10px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .adage-img-col img {
+        margin-top: 0;
+        width: 100%;
     }
 }
 
