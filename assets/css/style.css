@@ -238,7 +238,7 @@
 }
 
 /* excerpt-section css */
-.excerpt-section{
+.excerpt-section {
     background-color: var(--web-background);
     width: 100%;
     height: 100vh;
@@ -247,19 +247,19 @@
     align-items: center;
 }
 
-.right-side-text{
+.right-side-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 0 50px;
 }
 
-.right-side-text span{
+.right-side-text span {
     color: transparent;
     -webkit-text-stroke:.5px white;
 }
 
-.right-side-text h5{
+.right-side-text h5 {
     margin: 20px 0;
     text-transform: uppercase;
     color: white;
@@ -267,16 +267,16 @@
     letter-spacing: 1px;
 }
 
-.tiktok-text{
+.tiktok-text {
     font-family: var(--web-font);
     color: white;
 }
 
-.adage-img-col img{
-    max-height: 60vh;
+.adage-img-col img {
+    max-width: 670px;
 }
 
-.adage-img-col a{
+.adage-img-col a {
     color: white;
     text-transform: uppercase;
     font-weight: bold;
@@ -285,12 +285,12 @@
     text-decoration: none;
 }
 
-.adage-img-col h6{
+.adage-img-col h6 {
     margin-top: -50px;
     text-align: center;
 }
 
-.built-different{
+.built-different {
     width: 100%;
     height: 400px;
     background-color: white;
@@ -298,7 +298,7 @@
     
 }
 
-.inner-built-different{
+.inner-built-different {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -306,13 +306,13 @@
     text-align: center;
 }
 
-.inner-built-different h2{
+.inner-built-different h2 {
     font-family: var(--web-font);
     font-size: 40px;
     z-index: 1;
 }
 
-.underline-text{
+.underline-text {
     background-color: var(--off-screen-background-color);
     width: 41%;
     height: 10px;
@@ -320,7 +320,7 @@
     z-index: 0;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
     .company-logo {
         max-width: 150px;
     }
@@ -335,18 +335,22 @@
         justify-content: center;
     }
 
-    .read-btn2{
-        width: auto;
+    .excerpt-section {
+        height: auto;
+    }
+
+    .read-btn2 {
+        max-width: 100%;
         padding: 10px 10px;
     }
 
-    .right-side-text{
+    .right-side-text {
         margin-top: 10px;
         align-items: center;
         text-align: center;
     }
 
-    .adage-img-col img{
+    .adage-img-col img {
         margin-top: 0;
         width: 100%;
     }
