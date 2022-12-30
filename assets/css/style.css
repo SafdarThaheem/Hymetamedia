@@ -14,6 +14,7 @@
 
 html, body {
     overflow-x: hidden;
+
 }
 
 * {
@@ -350,7 +351,7 @@ html, body {
 
 .built-different {
     width: 100%;
-    height: 400px;
+    /* height: 400px; */
     background-color: white;
     display: flex;
     
