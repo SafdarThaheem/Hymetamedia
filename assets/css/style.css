@@ -174,7 +174,6 @@ html, body {
 }
 
 .agency-text mark {
-    /* background-color: var(--off-screen-background-color) !important; */
     background-image: linear-gradient(to right,#27ccc0 0,#27ccc0 100%);
     color: var(--text-primary-color);
     font-family: var(--web-font);
@@ -348,6 +347,7 @@ html, body {
     text-align: center;
 }
 
+/* built different section */
 .built-different {
     width: 100%;
     background-color: white;
@@ -376,6 +376,61 @@ html, body {
     margin-top: -20px;
     z-index: 0;
 }
+/* end built-different */
+
+/* vertical tabs implementation */
+.tabs-background {
+    background-color: black;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+#v-pills-tab {
+    border-left: 1px solid rgba(211, 211, 211, 0.313);
+}
+
+#v-pills-tab a {
+    color: gray;
+    font-family: var(--web-font);
+    font-size: 30px;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 30px;
+    border-left: 2px solid transparent;
+}
+
+#v-pills-tab a:nth-child(4) {
+    margin-bottom: 0!important;
+}
+
+#v-pills-tab a span {
+    padding-left: 55px;
+}
+
+#v-pills-tab a:hover {
+    color: white;
+}
+
+#v-pills-tab .nav-link.active {
+    border-left: 2px solid transparent;
+    border-image:linear-gradient(to bottom,#c3fffc,#3aacae);
+    border-image-slice: 1;
+    color: white;
+}
+
+.tab-pane-heading {
+    font-family: var(--web-font);
+    font-size: 33px;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+.tab-text {
+    font-size: 20px;
+}
+/* end style */
 
 /* clients */
 .client-main {
@@ -423,11 +478,6 @@ html, body {
     width: 100%;
 }
 
-.tabs-background {
-    background-color: black;
-    min-height: 100vh;
-    color: white;
-}
 /* awards */
 .awards {
     background-color: black;
@@ -435,50 +485,6 @@ html, body {
     height: 832px;
     display: flex;
     align-items: center;
-}
-
-#v-pills-tab {
-    border-left: 1px solid rgba(211, 211, 211, 0.313);
-}
-
-#v-pills-tab a {
-    color: gray;
-    font-family: var(--web-font);
-    font-size: 30px;
-    cursor: pointer;
-    padding: 0;
-    margin-bottom: 30px;
-    border-left: 2px solid transparent;
-}
-
-#v-pills-tab a:nth-child(4) {
-    margin-bottom: 0!important;
-}
-
-#v-pills-tab a span {
-    padding-left: 55px;
-}
-
-#v-pills-tab a:hover {
-    color: white;
-}
-
-#v-pills-tab .nav-link.active {
-    border-left: 2px solid transparent;
-    border-image:linear-gradient(to bottom,#c3fffc,#3aacae);
-    border-image-slice: 1;
-    color: white;
-}
-
-.tab-pane-heading {
-    font-family: var(--web-font);
-    font-size: 33px;
-    line-height: 40px;
-    font-weight: 700;
-}
-
-.tab-text {
-    font-size: 20px;
 }
 
 .awards .awards-text {
@@ -546,6 +552,16 @@ html, body {
     margin: 0;
     top: 0;
     right: 0;
+}
+
+.img-icon-adAge {
+    display: flex;
+    font-family: var(--web-font);
+}
+
+.img-icon-adAge p{
+    margin-left: 20px;
+    font-family: var(--permanent-marker-font)!important;
 }
 
 @media screen and (max-width: 576px) {
