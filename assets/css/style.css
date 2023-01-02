@@ -559,9 +559,43 @@ html, body {
     font-family: var(--web-font);
 }
 
-.img-icon-adAge p{
+.img-icon-adAge p {
     margin-left: 20px;
     font-family: var(--permanent-marker-font)!important;
+}
+
+/* VaynerMedia */
+.vayner-media-office {
+    background-color: black;
+    color: white;
+    min-height: 286px;
+    display: flex;
+}
+
+.inner-media-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.vayner-media-office .office-text {
+    font-family: var(--web-font);
+}
+
+.vayner-media-office .conpany-button a {
+    text-decoration: none;
+    color: white;
+    padding: 13px 30px;
+    border: 2px solid white;
+    font-family: var(--web-font);
+    font-size: medium;
+    transition: .3s ease all;
+}
+
+.vayner-media-office .conpany-button a:hover {
+    background-color: #27ccc0;
+    border-color: #27ccc0;
 }
 
 @media screen and (max-width: 576px) {
@@ -624,7 +658,20 @@ html, body {
     
     .text-video-row .video-col video {
         width: 100%;
-    }   
+    }
+    
+    .inner-media-content {
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0;
+        text-align: center;
+    }
+
+    .vayner-media-office .conpany-button a {
+        padding: 13px 20px;
+        border: 1px solid white;
+        font-size: small;
+    }
 }
 
 
