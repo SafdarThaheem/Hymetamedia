@@ -511,6 +511,10 @@ html, body {
         height: auto;
     }
 
+    .inner-built-different {
+        padding: 40px 0;
+    }
+
     .read-btn-2 {
         max-width: 100%;
         padding: 10px 10px;
