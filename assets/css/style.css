@@ -14,7 +14,6 @@
 
 html, body {
     overflow-x: hidden;
-
 }
 
 * {
@@ -428,6 +427,12 @@ html, body {
     background-color: black;
     min-height: 100vh;
     color: white;
+}
+/* awards */
+.awards {
+    background-color: black;
+    color: white;
+    height: 832px;
     display: flex;
     align-items: center;
 }
@@ -474,6 +479,73 @@ html, body {
 
 .tab-text {
     font-size: 20px;
+}
+
+.awards .awards-text {
+    padding:  0 45px;
+}
+
+.awards .awards-text .bold-text {
+    margin: 40px 0 20px 0;
+    font-family: var(--web-font);
+}
+
+.awards .awards-text p {
+    margin-bottom: 50px;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.awards .see-for-yourself {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--web-font);
+    letter-spacing: 1px;
+    font-size: large;
+    border: 4px solid;
+    color: rgb(255, 255, 255);
+    border-color: rgba(255, 255, 255, 0.75);
+    background-color: transparent;
+    padding: 17px 30px;
+    transition: .3s ease all;
+}
+
+.see-for-yourself:hover {
+    background-color: #27ccc0!important;
+    border-color: #27ccc0;
+}
+
+.text-col {
+    z-index: 100;
+}
+
+.text-video-row .double-quotes {
+    font-size: 110px;
+    line-height: 110px;
+    display: block;
+    margin-bottom: 30px;
+    font-family: var(--web-font);
+    color: #27ccc0!important;
+}
+
+.video-col {
+    z-index: 10;
+}
+
+.text-video-row p {
+    font-size: 31px;
+    letter-spacing: 1px;
+    font-family: var(--web-font);
+    line-height: 60px;
+}
+
+.text-video-row .video-col video {
+    width: 600px;
+    display: block;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    right: 0;
 }
 
 @media screen and (max-width: 576px) {
@@ -529,6 +601,14 @@ html, body {
     .tabs-background {
         padding: 40px 0;
     }
+
+    .awards {
+        height: auto;
+    } 
+    
+    .text-video-row .video-col video {
+        width: 100%;
+    }   
 }
 
 
