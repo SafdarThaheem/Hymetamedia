@@ -415,10 +415,14 @@ html, body {
     color: white;
 }
 
-#v-pills-tab .nav-link.active {
+#v-pills-tab .nav-link {
     border-left: 2px solid transparent;
-    border-image:linear-gradient(to bottom,#c3fffc,#3aacae);
-    border-image-slice: 1;
+    transition: all 0.7s;
+}
+
+#v-pills-tab .nav-link.active {
+    /* border-image:linear-gradient(to bottom,#c3fffc,#3aacae); */
+    border-left-color: #3aacae;
     color: white;
 }
 
