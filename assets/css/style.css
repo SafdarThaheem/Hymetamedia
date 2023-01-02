@@ -638,6 +638,59 @@ html, body {
     border-color: #27ccc0;
 }
 
+/* together section */
+.together-background {
+    max-width: 100%;
+    min-height: 425px;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.video-content h1 {
+    color: var(--text-primary-color);
+    font-family: var(--web-font);
+    letter-spacing: 1px;
+    font-size: 53px;
+    text-align: center;
+}
+
+.video-content .buttons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.video-content .buttons a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--web-font);
+    font-size: medium;
+    padding: 13px 20px;
+    border: 2px solid white;
+    transition: .3s ease all;
+}
+
+.video-content .buttons a:hover {
+    background-color: #27ccc0;
+    border-color: #27ccc0;
+}
+
 @media screen and (max-width: 576px) {
     .adage-img-col {
         width: 100%;
@@ -712,6 +765,16 @@ html, body {
         border: 1px solid white;
         font-size: small;
     }
+
+    .video-content .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-content .buttons span {
+        margin-bottom: 40px;
+    }
+
 }
 
 
