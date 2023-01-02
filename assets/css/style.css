@@ -598,6 +598,46 @@ html, body {
     border-color: #27ccc0;
 }
 
+.countries {
+    background-color: black;
+    color: var(--text-primary-color);
+    min-height: 259px;
+}
+
+.inner-countries-names {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.inner-countries-names div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-countries-names div p {
+    font-family: var(--web-font);
+    font-size: 20px;
+}
+
+.inner-countries-names div a {
+    text-decoration: none;
+    color: #27ccc0;
+    text-transform: uppercase;
+    font-family: var(--web-font);
+    font-size: small;
+    letter-spacing: 1px;
+    border-bottom: 2px solid;
+    border-color: transparent;
+    transition: .3s ease all;
+}
+
+.inner-countries-names div a:hover {
+    border-color: #27ccc0;
+}
+
 @media screen and (max-width: 576px) {
     .adage-img-col {
         width: 100%;
