@@ -3,6 +3,7 @@
 
 :root {
     --web-background: black;
+    --web-back-color-white: white;
     --off-screen-background-color: #22b4ab;
     --button-text-color:rgb(39, 204, 192);
     --button-border-color: rgba(39, 204, 192, 0.75);
@@ -36,7 +37,7 @@ html, body {
 }
 
 .navbar.illuminated-nav {
-    background-color: white;
+    background-color: var(--web-back-color-white);
     height: 80px;
 }
 
@@ -56,7 +57,7 @@ html, body {
 .ham-bar {
     width: 100%;
     height: 4px;
-    background-color: white;
+    background-color: var(--web-back-color-white);
     border-radius: 20px;
     position: absolute;
     top: 50%;
@@ -66,7 +67,7 @@ html, body {
 }
 
 .ham-bar:hover {
-   background-color: white; 
+   background-color: var(--web-back-color-white); 
 }
 
 .bar-top {
@@ -114,12 +115,13 @@ html, body {
 }
 
 .menu {
-    list-style-type: none;
     text-align: center;
     margin-top: 150px;
+    display: flex;
+    flex-direction: column;
 }
 
-.menu .menu-item a {
+.menu a {
     text-decoration: none;
     color: var(--text-primary-color);
     font-family: var(--web-font);
@@ -320,14 +322,14 @@ html, body {
 .right-side-text h5 {
     margin: 20px 0;
     text-transform: uppercase;
-    color: white;
+    color: var(--text-primary-color);
     font-family: var(--web-font);
     letter-spacing: 1px;
 }
 
 .tiktok-text {
     font-family: var(--web-font);
-    color: white;
+    color: var(--text-primary-color);
 }
 
 .adage-img-col {
@@ -335,7 +337,7 @@ html, body {
 }
 
 .adage-img-col a {
-    color: white;
+    color: var(--text-primary-color);
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 2px;
@@ -352,7 +354,7 @@ html, body {
 /* built different section */
 .built-different {
     width: 100%;
-    background-color: white;
+    background-color: var(--web-back-color-white);
     display: flex;  
 }
 
@@ -382,9 +384,9 @@ html, body {
 
 /* vertical tabs implementation */
 .tabs-background {
-    background-color: black;
+    background-color: var(--web-background);
     min-height: 100vh;
-    color: white;
+    color: var(--text-primary-color);
     display: flex;
     align-items: center;
 }
@@ -412,7 +414,7 @@ html, body {
 }
 
 #v-pills-tab a:hover {
-    color: white;
+    color: var(--text-primary-color);
 }
 
 #v-pills-tab .nav-link {
@@ -423,7 +425,7 @@ html, body {
 #v-pills-tab .nav-link.active {
     /* border-image:linear-gradient(to bottom,#c3fffc,#3aacae); */
     border-left-color: #3aacae;
-    color: white;
+    color: var(--text-primary-color);
 }
 
 .tab-pane-heading {
@@ -433,6 +435,13 @@ html, body {
     font-weight: 700;
 }
 
+.tabs-heading {
+    color: var(--text-primary-color);
+    font-family: var(--web-font);
+    margin-bottom: 20px;
+    display: none;
+}
+
 .tab-text {
     font-size: 20px;
 }
@@ -440,7 +449,7 @@ html, body {
 
 /* clients */
 .client-main {
-    background-color: white;
+    background-color: var(--web-back-color-white);
     width: 100%;   
 }
 
@@ -486,8 +495,8 @@ html, body {
 
 /* awards */
 .awards {
-    background-color: black;
-    color: white;
+    background-color: var(--web-background);
+    color: var(--text-primary-color);
     height: 832px;
     display: flex;
     align-items: center;
@@ -572,8 +581,8 @@ html, body {
 
 /* VaynerMedia */
 .vayner-media-office {
-    background-color: black;
-    color: white;
+    background-color: var(--web-background);
+    color: var(--text-primary-color);
     min-height: 286px;
     display: flex;
 }
@@ -591,7 +600,7 @@ html, body {
 
 .vayner-media-office .conpany-button a {
     text-decoration: none;
-    color: white;
+    color: var(--text-primary-color);
     padding: 13px 30px;
     border: 2px solid white;
     font-family: var(--web-font);
@@ -605,7 +614,7 @@ html, body {
 }
 
 .countries {
-    background-color: black;
+    background-color: var(--web-background);
     color: var(--text-primary-color);
     min-height: 259px;
 }
@@ -682,7 +691,7 @@ html, body {
 }
 
 .video-content .buttons a {
-    color: white;
+    color: var(--text-primary-color);
     text-decoration: none;
     text-transform: uppercase;
     font-family: var(--web-font);
@@ -702,7 +711,7 @@ html, body {
 
 /* footer css */
 .footer-back {
-    background-color: black;
+    background-color: var(--web-background);
     height: 272px;
     display: flex;
 }
@@ -710,8 +719,9 @@ html, body {
 .footer-icons {
     margin: 30px 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 0 250px;
+    padding: 0 270px;
 }
 
 .footer-icons a {
@@ -727,6 +737,7 @@ html, body {
     border-radius: 50px;
     width: 50px;
     height: 50px;
+    -webkit-transition: all 0.2s linear;
 }
 
 .footer-icons a i {
@@ -745,28 +756,34 @@ html, body {
     color:var(--social-btn-icon);
 }
 
+.footer-text p {
+    margin: 0;
+}
+
 .footer-text p a {
     color: var(--social-btn-icon);
     text-decoration: none;
 }
 
 .footer-text p a:hover {
-    color: white;
+    color: var(--text-primary-color);
 }
 
 .cookies-button {
+    margin-top: 20px;
     text-decoration: none;
     color: #68b631;
-    font-size: small;
     border: 1px solid #68b631;
-    background-color: white;
-    padding: 6px 8px;
+    font-size: 0.8em;
+    height: auto;
+    background-color: var(--web-back-color-white);
+    padding: 0.8em 2em;
     transition: .3s ease all;
 }
 
 .cookies-button:hover{
     background-color:#68b631;
-    color: white;
+    color: var(--text-primary-color);
 }
 
 @media screen and (max-width: 576px) {
@@ -854,6 +871,7 @@ html, body {
 
     .awards {
         height: auto;
+        padding-top: 20px;
     } 
     
     .text-video-row .video-col video {
@@ -882,6 +900,23 @@ html, body {
         margin-bottom: 40px;
     }
 
+    .tabs-col {
+        display: none;
+    }
+
+    .tabs-heading {
+        display: block;
+    }
+
+    #v-pills-tabContent {
+        padding:15px;
+        text-align: justify;
+    }
+
+    .tab-pane {
+        margin-bottom: 80px;
+        display: block;
+        visibility: visible;
+    }
+
 }
-
-
